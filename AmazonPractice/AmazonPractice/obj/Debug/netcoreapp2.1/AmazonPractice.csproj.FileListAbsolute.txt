@@ -1,0 +1,11 @@
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\obj\Debug\netcoreapp2.1\AmazonPractice.csprojAssemblyReference.cache
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\obj\Debug\netcoreapp2.1\AmazonPractice.csproj.CoreCompileInputs.cache
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\obj\Debug\netcoreapp2.1\AmazonPractice.AssemblyInfoInputs.cache
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\obj\Debug\netcoreapp2.1\AmazonPractice.AssemblyInfo.cs
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\bin\Debug\netcoreapp2.1\AmazonPractice.deps.json
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\bin\Debug\netcoreapp2.1\AmazonPractice.runtimeconfig.json
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\bin\Debug\netcoreapp2.1\AmazonPractice.runtimeconfig.dev.json
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\bin\Debug\netcoreapp2.1\AmazonPractice.dll
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\bin\Debug\netcoreapp2.1\AmazonPractice.pdb
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\obj\Debug\netcoreapp2.1\AmazonPractice.dll
+C:\Users\Ayodeji\source\repos\AmazonPractice\AmazonPractice\obj\Debug\netcoreapp2.1\AmazonPractice.pdb
