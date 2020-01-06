@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -283,6 +284,39 @@ namespace AmazonPractice
             return a;
         }
 
+        public int BooksAndAgesCodility(int[] a,int b)
+        {
+            int c = 0;         
+            Hashtable d = new Hashtable();
+            for (int i = 0; i < a.Length; i++)
+            {
+                int e = 0;
+                int f = 0;
+                if (!d.Contains(a[i]))
+                {
+                    for (int j = 0; j < a.Length; j++)
+                    {
+                      
+                        if (a[i] == a[j])
+                        {
+                            e++;
+                        }
+                        else
+                        {
+                            if (e > f)
+                            {
+                                f = e;
+                            }                        
+                            e = 0;
+                        }
+                    }
+                }
+
+                d.Add(a[i], f);
+            }
+            return c;
+        }
+     
     }
     public class PackageDataMgr
     {
