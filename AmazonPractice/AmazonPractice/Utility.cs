@@ -231,7 +231,7 @@ namespace AmazonPractice
             List<int> a = new List<int>();
             int u = a.Count();
             List<PackageDataMgr> datamgr = new List<PackageDataMgr>();
-            int[] b = new int[] { 100,180,40,120,10};
+            int[] b = new int[] { 100, 180, 40, 120, 10 };
             int TruckSpace = 250;
             int SafetyNet = 30;
             for (int i = 0; i < b.Length; i++)
@@ -243,7 +243,7 @@ namespace AmazonPractice
                         int c = b[i] + item + SafetyNet;
                         if (c <= TruckSpace)
                         {
-                            PackageDataMgr data = new PackageDataMgr();                           
+                            PackageDataMgr data = new PackageDataMgr();
                             data.PackageSum = c;
                             data.Package1 = b[i];
                             data.Package2 = item;
@@ -252,11 +252,11 @@ namespace AmazonPractice
                     }
                 }
             }
-            
-           int kk = datamgr.Max(c => c.PackageSum);
+
+            int kk = datamgr.Max(c => c.PackageSum);
             PackageDataMgr datab = datamgr.Where(x => x.PackageSum == kk).FirstOrDefault();
             a.FindIndex(n => n == datab.Package1);
-            a.Add(Array.IndexOf(b,datab.Package1));
+            a.Add(Array.IndexOf(b, datab.Package1));
             a.Add(Array.IndexOf(b, datab.Package2));
             return a;
         }
@@ -265,10 +265,10 @@ namespace AmazonPractice
             // WRITE YOUR CODE HERE
             int a = 0;
             List<int> bn = new List<int>();
-            int[,] numbers2D = new int[3, 3] { { 1,2,12}, { 3,4,30}, {1,5,8 } };
+            int[,] numbers2D = new int[3, 3] { { 1, 2, 12 }, { 3, 4, 30 }, { 1, 5, 8 } };
             for (int i = 0; i < numbers2D.Length; i++)
             {
-                for (int l = 0; l < numbers2D.Length/3; l++)
+                for (int l = 0; l < numbers2D.Length / 3; l++)
                 {
                     int cv = numbers2D[i, 0];
                     int cv1 = numbers2D[i, 1];
@@ -279,49 +279,344 @@ namespace AmazonPractice
                     int cv6 = cv2 + cv5;
                     bn.Add(cv6);
                 }
-          
+
             }
             return a;
         }
 
-        public int BooksAndAgesCodility(int[] a,int b)
+        public int BooksAndAgesCodility(int[] a, int b)
         {
-            int c = 0;         
-            Hashtable d = new Hashtable();
-            for (int i = 0; i < a.Length; i++)
+            int c = 0;
+            int chk = 0;
+            c = MaxContinuousArray(a);
+            if (b == 0)
+            {
+                return c;
+            }
+            chk = c;
+            int[][] d = NumberOfItemsExist(a);
+            for (int i = 0; i < d.Length; i++)
+            {
+                if (d[i] != null)
+                {
+                    if (d[i][1] == chk)
+                    {
+                        int[] e = new int[a.Length];
+                        a.CopyTo(e, 0);
+                        int z = b;
+                        if (d[i][2] != 0)
+                        {
+                            if (d[i][2] + b - 1 < a.Length)
+                            {
+                                bool aa = true;
+                                for (int jj = 0; jj < b; jj++)
+                                {
+                                    if (e[d[i][2] + jj] == d[i][0])
+                                    {
+                                        aa = false;
+                                    }
+                                }
+                                if (aa)
+                                {
+                                    for (int j = 0; j < b; j++)
+                                    {
+                                        if (d[i][2] + j < a.Length - z)
+                                        {
+                                            e[d[i][2] + j] = d[i][0];
+                                            z--;
+                                        }
+                                    }
+                                    int f = MaxContinuousArray(e);
+                                    if (f > c)
+                                    {
+                                        c = f;
+                                    }
+                                }
+                            }
+                        }
+                        e = new int[a.Length];
+                        a.CopyTo(e, 0);
+                        z = b;
+                        int y = d[i][2] - d[i][1];
+                        y -= 1;
+                        if (y >= b)
+                        {
+                            bool aa = true;
+                            for (int jj = 0; jj < b; jj++)
+                            {
+                                if (e[y - jj] == d[i][0])
+                                {
+                                    aa = false;
+                                }
+                            }
+                            if (aa)
+                            {
+                                for (int j = 0; j < b; j++)
+                                {
+                                    e[y - j] = d[i][0];
+                                }
+                                int f = MaxContinuousArray(e);
+                                if (f > c)
+                                {
+                                    c = f;
+                                }
+                            }
+
+                        }
+                        if (d[i][2] != 0)
+                        {
+                            if (b == 2)
+                            {
+                                e = new int[a.Length];
+                                a.CopyTo(e, 0);
+                                if (d[i][2] - (d[i][1] + 1) >= 0)
+                                {
+                                    if (e[d[i][2]] != d[i][0] && e[d[i][2] - (d[i][1] + 1)] != d[i][0])
+                                    {
+                                        e[d[i][2]] = d[i][0];
+                                        e[d[i][2] - (d[i][1] + 1)] = d[i][0];
+                                    }
+                                    int f = MaxContinuousArray(e);
+                                    if (f > c)
+                                    {
+                                        c = f;
+                                    }
+                                }
+                            }
+                            if (b > 2)
+                            {
+                                int zz = b - 1;
+                                int yy = 1;
+                                e = new int[a.Length];
+                                a.CopyTo(e, 0);
+                                for (int q = 0; q < b; q++)
+                                {
+                                    if ((d[i][2] + zz - 1 < a.Length) && (d[i][2] - ((d[i][1] - 1) + yy) >= 0))
+                                    {
+                                        zz--;
+                                        yy++;
+                                        bool aa = true;
+                                        for (int jj = 0; jj < zz; jj++)
+                                        {
+                                            if (e[d[i][2] + jj] == d[i][0])
+                                            {
+                                                aa = false;
+                                            }
+                                        }
+                                        y = d[i][2] - (d[i][1] - 1);
+                                        for (int jj = 0; jj < b; jj++)
+                                        {
+                                            if (e[y - jj] == d[i][0])
+                                            {
+                                                aa = false;
+                                            }
+                                        }
+                                        if (aa)
+                                        {
+                                            for (int j = 0; j < b; j++)
+                                            {
+                                                e[y - j] = d[i][0];
+                                                e[d[i][2] + j] = d[i][0];
+                                            }
+                                        }
+                                        int f = MaxContinuousArray(e);
+                                        if (f > c)
+                                        {
+                                            c = f;
+                                        }
+                                    }
+                                }
+
+
+
+                            }
+                        }
+
+
+                    }
+                }
+
+            }
+
+            return c;
+        }
+        public int[][] NumberOfItemsExist(int[] a)
+        {
+            int[] b = a.Distinct().ToArray();
+            int[][] d = new int[a.Length][];
+            int m = 0;
+            for (int i = 0; i < b.Length; i++)
             {
                 int e = 0;
-                int f = 0;
-                if (!d.Contains(a[i]))
+                for (int j = 0; j < a.Length; j++)
                 {
-                    for (int j = 0; j < a.Length; j++)
+
+                    if (b[i] == a[j])
                     {
-                      
-                        if (a[i] == a[j])
+                        e++;
+                    }
+                    else
+                    {
+                        if (e > 0)
                         {
-                            e++;
+                            int[] f = new int[3];
+                            f[0] = b[i];
+                            f[1] = e;
+                            f[2] = j;
+                            d[m] = f;
+                            m++;
+                            e = 0;
                         }
-                        else
+
+                    }
+                    if (j == a.Length - 1)
+                    {
+                        if (e > 0)
                         {
-                            if (e > f)
-                            {
-                                f = e;
-                            }                        
+                            int[] f = new int[3];
+                            f[0] = b[i];
+                            f[1] = e;
+                            f[2] = 0;
+                            d[m] = f;
+                            m++;
                             e = 0;
                         }
                     }
                 }
 
-                d.Add(a[i], f);
+            }
+            return d;
+        }
+        public int[] RemoveItem(int[] a, int b)
+        {
+            int[] c = new int[a.Length - 1];
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (a[i] != b)
+                {
+                    c[i] = a[i];
+                }
+                else
+                {
+                    i--;
+                }
             }
             return c;
         }
-     
+        public int MaxContinuousArray(int[] a)
+        {
+            int b = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                int c = 0;
+                for (int j = 0; j < a.Length; j++)
+                {
+                    if (a[i] == a[j])
+                    {
+                        c++;
+                    }
+                    else
+                    {
+                        if (c > b)
+                        {
+                            b = c;
+                        }
+                        c = 0;
+                    }
+                }
+                if (c > b)
+                {
+                    b = c;
+                }
+            }
+            return b;
+        }
+
+        public int[] ContinuousMatrix(int[][] a)
+        {
+            int[] b = new int[a.Length + a[1].Length-1];
+            int c = 0;
+            b[c] = a[0][0];
+            c++;
+            int d = 0;
+            int e = 0;
+            for (int i = 0; i < b.Length; i++)
+            {
+                Positions NewPositions = GetMaximumClosetoit(d, e, a);
+                b[c] = a[NewPositions.a][NewPositions.b];
+                c++;
+                d = NewPositions.a;
+                e = NewPositions.b;
+                if (d >= a.Length - 1 && e >= a[a.Length - 1].Length - 1)
+                {
+                    break;
+                }
+            }
+
+            return b;
+        }
+        public Positions GetMaximumClosetoit(int a, int b, int[][] c)
+        {
+            int e = c[a].Length;
+            Positions Newposition = new Positions();
+            if (a >= c.Length - 1 && b >= c[c.Length - 1].Length - 1)
+            {
+                Newposition.a = a;
+                Newposition.b = b;
+                return Newposition;
+            }
+            if (a+1 >= c.Length)
+            {
+                Newposition.a = a;
+                Newposition.b = b+1;
+                return Newposition;
+            }
+            if (b+1 >= c[c.Length - 1].Length)
+            {
+                Newposition.a = a+1;
+                Newposition.b = b;
+                return Newposition;
+            }
+            if (c[a][b + 1] > c[a + 1][b])
+            {
+                Newposition.a = a;
+                Newposition.b = b + 1;
+            }
+            else if (c[a][b + 1] < c[a + 1][b])
+            {
+                Newposition.a = a + 1;
+                Newposition.b = b;
+            }
+            else
+            {
+                Positions Newpositionu = GetMaximumClosetoit(a, b + 1, c);
+                Positions Newpositionh = GetMaximumClosetoit(a + 1, b, c);
+                if (c[Newpositionu.a][Newpositionu.b] > c[Newpositionh.a][Newpositionh.b])
+                {
+                    Newposition.a = a;
+                    Newposition.a = b + 1;
+                }
+                if (c[Newpositionu.a][Newpositionu.b] < c[Newpositionh.a][Newpositionh.b])
+                {
+                    Newposition.a = a + 1;
+                    Newposition.a = b;
+                }
+
+            }
+            return Newposition;
+        }
     }
+
+
     public class PackageDataMgr
     {
         public int Package1 { get; set; }
         public int Package2 { get; set; }
         public int PackageSum { get; set; }
+    }
+    public class Positions
+    {
+        public int a { get; set; }
+        public int b { get; set; }
     }
 }
