@@ -1,0 +1,10 @@
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/bin/Debug/netcoreapp2.1/CodilityTest.deps.json
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/bin/Debug/netcoreapp2.1/CodilityTest.runtimeconfig.json
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/bin/Debug/netcoreapp2.1/CodilityTest.runtimeconfig.dev.json
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/bin/Debug/netcoreapp2.1/CodilityTest.dll
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/bin/Debug/netcoreapp2.1/CodilityTest.pdb
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/Debug/netcoreapp2.1/CodilityTest.csprojAssemblyReference.cache
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/Debug/netcoreapp2.1/CodilityTest.AssemblyInfoInputs.cache
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/Debug/netcoreapp2.1/CodilityTest.AssemblyInfo.cs
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/Debug/netcoreapp2.1/CodilityTest.dll
+/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/Debug/netcoreapp2.1/CodilityTest.pdb

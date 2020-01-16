@@ -1,0 +1,87 @@
+﻿<Properties StartupConfiguration="{94A941D4-D76E-4236-B8D6-8E54CA8720F7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CodilityTest/Permutation.cs">
+    <Files>
+      <File FileName="CodilityTest/Algorithm.cs" Line="145" Column="33" />
+      <File FileName="CodilityTest/Program.cs" Line="98" Column="42" />
+      <File FileName="CodilityTest/DataStructure.cs" Line="1" Column="1" />
+      <File FileName="CodilityTest/ShortestPath.cs" />
+      <File FileName="CodilityTest/Combination.cs" Line="1" Column="1" />
+      <File FileName="CodilityTest/Permutation.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CodilityTest" expanded="True">
+            <Node name="CodilityTest" expanded="True">
+              <Node name="Permutation.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.CodilityTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/dxyfluz4.pra~" relfile="CodilityTest/dxyfluz4.pra~" line="10" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/5kc45mhx.4mv~" relfile="CodilityTest/5kc45mhx.4mv~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/eqb7y06m.q9t~" relfile="CodilityTest/eqb7y06m.q9t~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/2ixdaspc.uz8~" relfile="CodilityTest/2ixdaspc.uz8~" line="10" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/2ixdaspc.uz8~" relfile="CodilityTest/2ixdaspc.uz8~" line="40" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/nsq1it0o.f34~" relfile="CodilityTest/nsq1it0o.f34~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/nsq1it0o.f34~" relfile="CodilityTest/nsq1it0o.f34~" line="23" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/9e865k7y.kzn~" relfile="CodilityTest/9e865k7y.kzn~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/9e865k7y.kzn~" relfile="CodilityTest/9e865k7y.kzn~" line="23" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/o8x5uab6.dxe~" relfile="CodilityTest/o8x5uab6.dxe~" line="23" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/o8x5uab6.dxe~" relfile="CodilityTest/o8x5uab6.dxe~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/9y8simyz.140~" relfile="CodilityTest/9y8simyz.140~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/9y8simyz.140~" relfile="CodilityTest/9y8simyz.140~" line="24" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/DataStructure.cs" relfile="CodilityTest/DataStructure.cs" line="390" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/wusgjndp.ltw~" relfile="CodilityTest/wusgjndp.ltw~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/wusgjndp.ltw~" relfile="CodilityTest/wusgjndp.ltw~" line="47" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Graph.cs" relfile="CodilityTest/Graph.cs" line="52" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Graph.cs" relfile="CodilityTest/Graph.cs" line="101" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Graph.cs" relfile="CodilityTest/Graph.cs" line="39" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/jyfvput6.4mt~" relfile="CodilityTest/jyfvput6.4mt~" line="13" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/e5wpfo81.bpx~" relfile="CodilityTest/e5wpfo81.bpx~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/eod82trl.wd1~" relfile="CodilityTest/eod82trl.wd1~" line="10" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/2np986yz.b1p~" relfile="CodilityTest/2np986yz.b1p~" line="57" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/2np986yz.b1p~" relfile="CodilityTest/2np986yz.b1p~" line="74" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/2np986yz.b1p~" relfile="CodilityTest/2np986yz.b1p~" line="8" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/2np986yz.b1p~" relfile="CodilityTest/2np986yz.b1p~" line="15" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/2np986yz.b1p~" relfile="CodilityTest/2np986yz.b1p~" line="39" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/ny5cbg3w.0vk~" relfile="CodilityTest/ny5cbg3w.0vk~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/8t22jwp5.sv3~" relfile="CodilityTest/8t22jwp5.sv3~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/3wogbthj.so6~" relfile="CodilityTest/3wogbthj.so6~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/a6dfbgin.tpf~" relfile="CodilityTest/a6dfbgin.tpf~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/02l62d2t.drl~" relfile="CodilityTest/02l62d2t.drl~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/vz7u19sj.t5v~" relfile="CodilityTest/vz7u19sj.t5v~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/vz7u19sj.t5v~" relfile="CodilityTest/vz7u19sj.t5v~" line="29" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/vz7u19sj.t5v~" relfile="CodilityTest/vz7u19sj.t5v~" line="75" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Graph.cs" relfile="CodilityTest/Graph.cs" line="44" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Graph.cs" relfile="CodilityTest/Graph.cs" line="81" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Graph.cs" relfile="CodilityTest/Graph.cs" line="84" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Graph.cs" relfile="CodilityTest/Graph.cs" line="72" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/MainUtility.cs" relfile="CodilityTest/MainUtility.cs" line="323" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/MainUtility.cs" relfile="CodilityTest/MainUtility.cs" line="335" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/MainUtility.cs" relfile="CodilityTest/MainUtility.cs" line="306" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/e2ksgaed.2di~" relfile="CodilityTest/e2ksgaed.2di~" line="92" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/e2ksgaed.2di~" relfile="CodilityTest/e2ksgaed.2di~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/7i8bnd9k.vuo~" relfile="CodilityTest/7i8bnd9k.vuo~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/7c5ck9mw.lm8~" relfile="CodilityTest/7c5ck9mw.lm8~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/9a2owp68.von~" relfile="CodilityTest/9a2owp68.von~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/9a2owp68.von~" relfile="CodilityTest/9a2owp68.von~" line="24" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/9sgqxpra.m1f~" relfile="CodilityTest/9sgqxpra.m1f~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/rov8tz0s.ao3~" relfile="CodilityTest/rov8tz0s.ao3~" line="97" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/rov8tz0s.ao3~" relfile="CodilityTest/rov8tz0s.ao3~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/gbul2qnh.nej~" relfile="CodilityTest/gbul2qnh.nej~" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/gbul2qnh.nej~" relfile="CodilityTest/gbul2qnh.nej~" line="21" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Program.cs" relfile="CodilityTest/Program.cs" line="11" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/Program.cs" relfile="CodilityTest/Program.cs" line="98" column="1" />
+      <Breakpoint file="/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/zdbnc5p3.yzd~" relfile="CodilityTest/zdbnc5p3.yzd~" line="93" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
