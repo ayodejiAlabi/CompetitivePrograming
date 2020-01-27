@@ -137,9 +137,10 @@ namespace CodilityTest
             int b = Math.Abs(a.Length / 2);
             int[] c = new int[b];
             int[] d = new int[a.Length - b];
+            int e = 0;
             for (int i = 0; i < a.Length; i++)
             {
-                int e = 0;
+
                 if (i < b)
                 {
                     c[e] = a[i];
@@ -158,6 +159,11 @@ namespace CodilityTest
             int[] f = MergeSort(c);
             int[] g = MergeSort(d);
             // Merge
+            return NewMethod(out b, f, g);
+        }
+
+        private static int[] NewMethod(out int b, int[] f, int[] g)
+        {
             b = f.Length + g.Length;
             int[] l = new int[b];
             int h = 0, j = 0, k = 0;

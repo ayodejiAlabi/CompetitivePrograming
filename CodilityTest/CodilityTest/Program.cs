@@ -18,7 +18,7 @@ namespace CodilityTest
             Algorithm hgt = new Algorithm();
             
             GFG t = new GFG();
-          
+       
             //int yy = hgt.euclidhcf(500, 250);
             //int[] yyuy = { 1,2,9,5,7,3};
             //int[] vwfjnv = hgt.QuickSort(yyuy);
@@ -94,7 +94,8 @@ graph discussed above */
             //lkl.AddEdge(3, 4, 2000);
 
             //lkl.Display();
-            int[] bg = { 11, 30, 2, 30, 30, 30, 6, 2, 62, 62 };
+             int[] bg = { 11, 30, 2, 30, 30, 30, 6, 2, 62, 62 };
+            //int[] bg = { 1, 3, 2 };
             int[] bv = hgt.MergeSort(bg);
             //int bv = hgt.ReservoirSampling(bg);
         }

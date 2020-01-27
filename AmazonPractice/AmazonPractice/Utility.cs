@@ -3,11 +3,381 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace AmazonPractice
 {
     class Utility
     {
+        public bool AllienDictionary()
+        {
+            bool a = true;
+            string b = "worldabcefghijkmnpqstuvxyz";
+            string[] c = { "word", "world", "row" };
+            char[] d = b.ToCharArray();
+            for (int i = 0; i < c.Length; i++)
+            {
+                char[] e = c[i].ToCharArray();
+                int[] f = new int[e.Length];
+                for (int j = 0; j < e.Length; j++)
+                {
+                    f[j] = Array.IndexOf(d, e[j]);
+                }
+                if (i + 1 < c.Length)
+                {
+                    char[] g = c[i + 1].ToCharArray();
+                    for (int k = 0; k < e.Length; k++)
+                    {
+                        int h = Array.IndexOf(d, g[k]);
+                        if (f[k] > h)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            if (e[k] != g[k])
+                            {
+                                break;
+                            }
+
+                        }
+                    }
+                }
+
+
+            }
+
+
+            return a;
+        }
+        public bool IsPalindrome()
+        {
+
+            string s = "A man, a plan, a canal: Panama";
+            string my_String = Regex.Replace(s, @"[^0-9a-zA-Z]", "");
+            char[] a = my_String.ToCharArray();
+            Array.Reverse(a);
+            string hhh = null;
+            for (int i = 0; i < a.Length; i++)
+            {
+                hhh += a[i].ToString().ToLower();
+            }
+
+            if (my_String.ToLower() == hhh)
+            {
+                return true;
+            }
+            return false;
+        }
+        public string LongestPalindrome()
+        {
+            string s = "abcaba";
+            string b = null;
+            bool[,] c = new bool[s.Length, s.Length];
+            Hashtable cc = new Hashtable();
+            int ccc = 0;
+            IList<string> vv = new List<string>();
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (i + 1 < s.Length)
+                {
+                    c[i, i] = true;
+                    ccc = 1;
+                    if (!cc.ContainsKey(ccc))
+                    {
+                        cc.Add(ccc, s.Substring(0, 1));
+                    }
+                }
+                if (i + 1 < s.Length)
+                {
+                    string e = s.Substring(i, 2);
+                    char[] f = e.ToCharArray();
+                    Array.Reverse(f);
+                    c[i, i + 1] = e == f.ToString() ? true : false;
+                    if (e == f.ToString())
+                    {
+                        if (ccc < 2)
+                        {
+                            ccc = 2;
+                            if (!cc.ContainsKey(ccc))
+                            {
+                                cc.Add(ccc, e);
+                            }
+                        }
+                    }
+                }
+            }
+            char[] m = s.ToCharArray();
+            int h = 0;
+            while (h < s.Length)
+            {
+                int g = h + 2;
+                while (g < s.Length)
+                {
+                    if (m[h] == m[g] && c[h + 1, g - 1])
+                    {
+                        c[h, g] = true;
+                        string pallin = s.Substring(h, (g - h) + 1);
+                        if (ccc < pallin.Length)
+                        {
+                            ccc = pallin.Length;
+                            if (!cc.ContainsKey(ccc))
+                            {
+                                cc.Add(ccc, pallin);
+                            }
+                        }
+                    }
+                    g++;
+                }
+                h++;
+            }
+            return b;
+        }
+        public void FirstReoccuring(string input)
+        {
+            LinkedList<char> outPutList = new LinkedList<char>();
+            Char[] inputList = input.ToCharArray();
+            foreach (char item in inputList)
+            {
+                Console.WriteLine(item + " ");
+                if (outPutList.Contains(item))
+                {
+                    //HERE IS SUPPOSED TO BE THE ANSWER
+                    Console.Write(item + " ");
+                }
+                outPutList.Append(item);
+            }
+        }
+        public int BiggestSquare(int[][] a)
+        {
+            int b = 0;
+            int maxitem = Math.Max(a.Length, a[0].Length);
+            int[,] c = new int[maxitem, maxitem];
+            for (int i = 0; i < a.Length - 1; i++)
+            {
+                for (int j = 0; j < a[i].Length - 1; j++)
+                {
+                    if (a[i][j] == 1)
+                    {
+                        b = b == 0 ? 1 : b;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                    bool dd = true;
+                    int cnt = 1;
+                    int column = j;
+                    int row = i;
+                    int cnter = 0;
+                    while (dd)
+                    {
+                        cnter++;
+                        if (i + cnter > a.Length - 1 || j + cnter > a[0].Length - 1)
+                        {
+                            break;
+                        }
+                        column = j + cnter;
+                        row = i;
+                        bool d = false;
+                        while (row <= j + cnter && row < a.Length)
+                        {
+                            if (a[row][column] == 1)
+                            {
+                                d = true;
+                                cnt++;
+                            }
+                            else
+                            {
+                                d = false;
+                                dd = false;
+                                break;
+                            }
+                            row++;
+                        }
+                        if (d)
+                        {
+                            d = false;
+                            column = i;
+                            row = j + cnter;
+                            while (column < row && column < a[0].Length && row < a.Length)
+                            {
+                                if (a[row][column] == 1)
+                                {
+                                    d = true;
+                                    cnt++;
+                                    column++;
+                                }
+                                else
+                                {
+                                    d = false;
+                                    dd = false;
+                                    break;
+                                }
+                            }
+                            if (d)
+                            {
+                                b = b > cnt ? b : cnt;
+                            }
+                        }
+                    }
+
+
+                }
+            }
+
+            return b;
+        }
+        public bool BiggestSquareHelper(int[][] a, int i, int j)
+        {
+            bool b = false;
+            int c = a[i][j] + a[i][j + 1] + a[i + 1][j] + a[i + 1][j + 1];
+            if (c == 4)
+            {
+                b = true;
+            }
+            return b;
+        }
+        public IList<IList<int>> Algo4Sum()
+        {
+            int[] a = { 1, 0, -1, 0, -2, 2 };
+            int k = 0;
+            IList<IList<int>> b = new List<IList<int>>();
+            SortedSet<string> bb = new SortedSet<string>();
+            int bbc = a.Length - 1;
+            for (int i = 0; i < a.Length; i++)
+            {
+                int c = k - a[i];
+
+                int[] d = new int[bbc];
+                int e = 0;
+                for (int j = 0; j < a.Length; j++)
+                {
+                    if (a[j] != a[i])
+                    {
+                        d[e] = a[j];
+                        e++;
+                    }
+                }
+                IList<IList<int>> f = Algo3Sum(d, c);
+                if (f.Count > 0)
+                {
+                    foreach (var item in f)
+                    {
+                        item.Add(a[i]);
+                        string ggh = null;
+                        int[] mmn = new int[item.Count];
+                        int mm = 0;
+                        foreach (var itema in item)
+                        {
+                            mmn[mm] = itema;
+                            mm++;
+                        }
+                        Array.Sort(mmn);
+                        for (int ii = 0; ii < mmn.Length; ii++)
+                        {
+                            ggh += mmn[ii].ToString();
+                        }
+                        if (!bb.Contains(ggh))
+                        {
+                            b.Add(item);
+                            bb.Add(ggh);
+                        }
+
+
+                    }
+                }
+
+            }
+            return b;
+        }
+        public IList<IList<int>> Algo3Sum(int[] a, int k)
+        {
+            IList<IList<int>> b = new List<IList<int>>();
+            SortedSet<string> bb = new SortedSet<string>();
+            Array.Sort(a);
+            for (int i = 0; i < a.Length; i++)
+            {
+                int c = i + 1;
+                int d = a.Length - 1;
+                while (c < d)
+                {
+                    if (a[i] + a[c] + a[d] == k)
+                    {
+                        string dd = a[i].ToString() + a[c].ToString() + a[d].ToString();
+                        if (!bb.Contains(dd))
+                        {
+                            IList<int> e = new List<int>
+                        {
+                            a[i],
+                            a[c],
+                            a[d]
+                        };
+                            b.Add(e);
+                            bb.Add(dd);
+                        }
+                        c++;
+                        d--;
+                    }
+                    if (a[i] + a[c] + a[d] > k)
+                    {
+
+                        d--;
+                    }
+                    if (a[i] + a[c] + a[d] < k)
+                    {
+
+                        c++;
+                    }
+
+                }
+
+            }
+            return b;
+        }
+        public int lps(char[] seq, int i, int j)
+        {
+            // Base Case 1: If there is only 1 character  
+            if (i == j)
+            {
+                return 1;
+            }
+            // Base Case 2: If there are only 2 characters and both are same  
+            if (seq[i] == seq[j] && i + 1 == j)
+            {
+                return 2;
+            }
+            // If the first and last characters match  
+            if (seq[i] == seq[j])
+            {
+                return lps(seq, i + 1, j - 1) + 2;
+            }
+            // If the first and last characters do not match  
+            return Math.Max(lps(seq, i, j - 1), lps(seq, i + 1, j));
+        }
+
+        public string PalindromicExt(string a)
+        {
+            string b = null;
+            int bb = 0;
+            int c = 1;
+            for (int i = 0; i < a.Length; i++)
+            {
+                string d = a.Substring(i, c + i);
+                char[] e = d.ToCharArray();
+                Array.Reverse(e);
+                if (d == e.ToString())
+                {
+                    if (d.Length > bb)
+                    {
+                        b = d;
+                        bb = d.Length;
+                    }
+
+                }
+            }
+            return b;
+        }
         public string Palindromic(string a)
         {
             //Find the longest palindromic substring  from the given string. No need of DP solution.
@@ -534,7 +904,7 @@ namespace AmazonPractice
 
         public int[] ContinuousMatrix(int[][] a)
         {
-            int[] b = new int[a.Length + a[1].Length-1];
+            int[] b = new int[a.Length + a[1].Length - 1];
             int c = 0;
             b[c] = a[0][0];
             c++;
@@ -565,15 +935,15 @@ namespace AmazonPractice
                 Newposition.b = b;
                 return Newposition;
             }
-            if (a+1 >= c.Length)
+            if (a + 1 >= c.Length)
             {
                 Newposition.a = a;
-                Newposition.b = b+1;
+                Newposition.b = b + 1;
                 return Newposition;
             }
-            if (b+1 >= c[c.Length - 1].Length)
+            if (b + 1 >= c[c.Length - 1].Length)
             {
-                Newposition.a = a+1;
+                Newposition.a = a + 1;
                 Newposition.b = b;
                 return Newposition;
             }
@@ -605,18 +975,348 @@ namespace AmazonPractice
             }
             return Newposition;
         }
-    }
+        public int CodilityHoliday(int[] a)
+        {
+            int b = 0;
+            Graph GX = new Graph(a.Length);
+            int[,] AdjMatrix = new int[a.Length, a.Length];
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (i != a[i])
+                {
+                    AdjMatrix = GX.AddEdge(i, a[i], 1);
+                }
+                else
+                {
+                    AdjMatrix = GX.AddEdge(i, a[i], 2);
+                }
+            }
+            for (int i = 0; i < a.Length; i++)
+            {
+                for (int k = 0; k < a.Length; k++)
+                {
+                    if (i == k)
+                    {
+                        b++;
+                    }
+                    else if (AdjMatrix[i, k] == 1 && i >= 0 && k <= a.Length - 1)
+                    {
+                        b++;
+                    }
+
+                }
+            }
+            return b;
+        }
+        public IList<IList<int>> Sum3(int[] a)
+        {
+            IList<IList<int>> b = new List<IList<int>>();
+            SortedSet<String> set = new SortedSet<String>();
+            int[][] c = AllPossibleWaysExtCombination(a);
+            for (int i = 0; i < c.Length; i++)
+            {
+                if (c[i] != null)
+                {
+                    if (c[i].Length == 3)
+                    {
+                        int d = TestRecurssion(c[i], c[i].Length);
+                        if (d == 0)
+                        {
+                            int[] y = MergeSort(c[i]);
+                            string z = null;
+                            for (int l = 0; l < y.Length; l++)
+                            {
+                                z += y[l].ToString();
+                            }
+                            if (!set.Contains(z))
+                            {
+                                IList<int> e = new List<int>();
+                                for (int j = 0; j < c[i].Length; j++)
+                                {
+                                    e.Add(c[i][j]);
+                                }
+                                b.Add(e);
+                                set.Add(z);
+                            }
+                        }
+                    }
+                }
+
+            }
+            return b;
+        }
+        public IList<IList<int>> threeSum(int[] nums)
+        {
+            int[] a = MergeSort(nums);
+
+            IList<IList<int>> b = new List<IList<int>>();
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                int j = i + 1;
+                int k = a.Length - 1;
+
+                if (i > 0 && a[i] == a[i - 1])
+                {
+                    continue;
+                }
+
+                while (j < k)
+                {
+                    if (k < a.Length - 1 && a[k] == a[k + 1])
+                    {
+                        k--;
+                        continue;
+                    }
+
+                    if (a[i] + a[j] + a[k] > 0)
+                    {
+                        k--;
+                    }
+                    else if (a[i] + a[j] + a[k] < 0)
+                    {
+                        j++;
+                    }
+                    else
+                    {
+                        List<int> l = new List<int>();
+                        l.Add(a[i]);
+                        l.Add(a[j]);
+                        l.Add(a[k]);
+                        b.Add(l);
+                        j++;
+                        k--;
+                    }
+                }
+            }
+
+            return b;
+        }
+        public int[] MergeSort(int[] a)
+        {
+            if (a.Length <= 1)
+            {
+                return a;
+            }
+            int b = Math.Abs(a.Length / 2);
+            int[] c = new int[b];
+            int[] d = new int[a.Length - b];
+            int e = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+
+                if (i < b)
+                {
+                    c[e] = a[i];
+                    e++;
+                }
+                if (i == b)
+                {
+                    e = 0;
+                }
+                if (i >= b)
+                {
+                    d[e] = a[i];
+                    e++;
+                }
+            }
+            int[] f = MergeSort(c);
+            int[] g = MergeSort(d);
+            // Merge
+            return NewMethod(out b, f, g);
+        }
+
+        //public ListNode MergeTwoLists(ListNode A, ListNode B)
+        //{
+        //    if (A == null) return B;
+        //    if (B == null) return A;
+
+        //    if (A.val < B.val)
+        //    {
+        //        A.next = MergeTwoLists(A.next, B);
+        //        return A;
+        //    }
+        //    else
+        //    {
+        //        B.next = MergeTwoLists(A, B.next);
+        //        return B;
+        //    }
+
+        //}
+        public static int maxProfit(int[] prices)
+        {
+            int max_profit = -1;
+            // Write the code to solve the problem below
+            for (int i = 0; i < prices.Length; i++)
+            {
+
+            }
+            // Return the maximum profit for the given set of prices
+            return max_profit;
+        }
+        private static int[] NewMethod(out int b, int[] f, int[] g)
+        {
+            b = f.Length + g.Length;
+            int[] l = new int[b];
+            int h = 0, j = 0, k = 0;
+            while ((h < f.Length) || (j < g.Length))
+            {
+                //if both arrays have elements  
+                if (h < f.Length && j < g.Length)
+                {
+                    //If item on left array is less than item on right array, add that item to the result array 
+                    if (f[h] <= g[j])
+                    {
+                        l[k] = f[h];
+                        h++;
+                        k++;
+                    }
+                    // else the item in the right array wll be added to the results array
+                    else
+                    {
+                        l[k] = g[j];
+                        j++;
+                        k++;
+                    }
+                }
+                //if only the left array still has elements, add all its items to the results array
+                else if (h < f.Length)
+                {
+                    l[k] = f[h];
+                    h++;
+                    k++;
+                }
+                //if only the right array still has elements, add all its items to the results array
+                else if (j < g.Length)
+                {
+                    l[k] = g[j];
+                    j++;
+                    k++;
+                }
+            }
+            return l;
+        }
+        public int TestRecurssion(int[] a, int b)
+        {
+            if (b <= 0)
+            {
+                return 0;
+            }
+            int c = a[b - 1];
+            int d = c + TestRecurssion(a, b - 1);
+            return d;
+
+        }
+        public int CombinationCnt(int a, int b)
+        {
+            if (a == 1)
+            {
+                return 1;
+            }
+            int c = CombinationCnt(a - 1, b);
+            int d = a + c;
+            if (a == b)
+            {
+                return d;
+            }
+            a = c + d;
+            return a;
+        }
+        public int[][] AllPossibleWaysExtCombination(int[] a)
+        {
+            int Jarraylenth = CombinationCnt(a.Length, a.Length);
+
+            int[][] jaggedArray1 = new int[Jarraylenth][];
+
+            int c = 0;
+            for (int i = 0; i < a.Length; i++)
+            {
+                int[] b = { a[i] };
+
+                jaggedArray1 = AllPossibleWaysCombination(b, 1, jaggedArray1, c, i + 1, a.Length);
+                c++;
+
+            }
+
+            return jaggedArray1;
+        }
+
+        public int[][] AllPossibleWaysCombination(int[] a, int b, int[][] jaggedArray, int d, int g, int h)
+        {
+            if (b > 2)
+            {
+                return jaggedArray;
+            }
+            if (b == 1)
+            {
+                int[] c = new int[b];
+                c[0] = a[0];
+                if (d != 0)
+                {
+                    while (jaggedArray[d] != null)
+                    {
+                        d++;
+                    }
+                }
+
+                jaggedArray[d] = c;
+                b++;
+                d++;
+                return AllPossibleWaysCombination(a, b, jaggedArray, d, g, h);
+            }
+            int JArrayLength = jaggedArray.Length - h;
+            int[][] jaggedArray1 = new int[JArrayLength][];
+            int f = 0;
+            for (int i = 0; i < d; i++)
+            {
+                if (a[0] == jaggedArray[i][0] && jaggedArray[i].Length == 1)
+                {
+                }
+                else
+                {
+                    if (!jaggedArray[i].Equals(null))
+                    {
+                        int vv = jaggedArray[i].Length + 1;
+                        int[] c = new int[vv];
+                        int e = 0;
+                        for (int j = 0; j < jaggedArray[i].Length; j++)
+                        {
+                            c[e] = jaggedArray[i][j];
+                            e++;
+                        }
+                        c[e] = a[0];
+                        jaggedArray1[f] = c;
+                        f++;
 
 
-    public class PackageDataMgr
-    {
-        public int Package1 { get; set; }
-        public int Package2 { get; set; }
-        public int PackageSum { get; set; }
-    }
-    public class Positions
-    {
-        public int a { get; set; }
-        public int b { get; set; }
+                    }
+                }
+            }
+
+            for (int k = 0; k < f; k++)
+            {
+                if (!jaggedArray1[k].Equals(null))
+                {
+                    jaggedArray[d] = jaggedArray1[k];
+                    d++;
+                }
+            }
+            b++;
+            return AllPossibleWaysCombination(a, b, jaggedArray, d, g, h);
+        }
     }
 }
+
+
+public class PackageDataMgr
+{
+    public int Package1 { get; set; }
+    public int Package2 { get; set; }
+    public int PackageSum { get; set; }
+}
+public class Positions
+{
+    public int a { get; set; }
+    public int b { get; set; }
+}
+

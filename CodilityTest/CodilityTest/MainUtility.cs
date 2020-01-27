@@ -19,14 +19,14 @@ namespace CodilityTest
             return d;
 
         }
-        public int TestRecurssionMultiply(int[] a, int b)
+        public int TestRecurssionMultiply(int[] a, int b,Hashtable e)
         {
             if (b == 0)
             {
                 return 1;
             }
             int c = a[b - 1];
-            int d = c * TestRecurssionMultiply(a, b - 1);
+            int d = c * TestRecurssionMultiply(a, b - 1,e);
             return d;
 
         }
@@ -42,6 +42,14 @@ namespace CodilityTest
                 return 2;
             }
             return a * Factorial(a - 1);
+        }
+        public int Fibonacci(int a)
+        {
+            if ((a == 0) || (a == 1))
+            {
+                return 1;
+            }           
+            return Fibonacci(a-1) + Fibonacci(a - 2);
         }
         public int AllPossibleSumToInt(int[] A, int b)
         {

@@ -688,28 +688,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/ayodejialabi/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Ayodeji\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/CodilityTest.csproj",
+      "projectUniqueName": "C:\\Users\\Ayodeji\\Documents\\Personal\\Repos\\CompetitivePrograming\\CodilityTest\\CodilityTest\\CodilityTest.csproj",
       "projectName": "CodilityTest",
-      "projectPath": "/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/CodilityTest.csproj",
-      "packagesPath": "/Users/ayodejialabi/.nuget/packages/",
-      "outputPath": "/Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/",
+      "projectPath": "C:\\Users\\Ayodeji\\Documents\\Personal\\Repos\\CompetitivePrograming\\CodilityTest\\CodilityTest\\CodilityTest.csproj",
+      "packagesPath": "C:\\Users\\Ayodeji\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ayodeji\\Documents\\Personal\\Repos\\CompetitivePrograming\\CodilityTest\\CodilityTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/ayodejialabi/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Ayodeji\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -743,7 +748,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

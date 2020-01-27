@@ -8,3 +8,13 @@
 /Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/Debug/netcoreapp2.1/CodilityTest.AssemblyInfo.cs
 /Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/Debug/netcoreapp2.1/CodilityTest.dll
 /Users/ayodejialabi/Projects/CodilityTest/CodilityTest/obj/Debug/netcoreapp2.1/CodilityTest.pdb
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\bin\Debug\netcoreapp2.1\CodilityTest.deps.json
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\bin\Debug\netcoreapp2.1\CodilityTest.runtimeconfig.json
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\bin\Debug\netcoreapp2.1\CodilityTest.runtimeconfig.dev.json
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\bin\Debug\netcoreapp2.1\CodilityTest.dll
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\bin\Debug\netcoreapp2.1\CodilityTest.pdb
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\obj\Debug\netcoreapp2.1\CodilityTest.csprojAssemblyReference.cache
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\obj\Debug\netcoreapp2.1\CodilityTest.AssemblyInfoInputs.cache
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\obj\Debug\netcoreapp2.1\CodilityTest.AssemblyInfo.cs
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\obj\Debug\netcoreapp2.1\CodilityTest.dll
+C:\Users\Ayodeji\Documents\Personal\Repos\CompetitivePrograming\CodilityTest\CodilityTest\obj\Debug\netcoreapp2.1\CodilityTest.pdb

@@ -13,7 +13,7 @@ namespace CodilityTest
             public Node Prev;
         }
         private Node head;
-       
+
         public void AddLinkedListItem(object data)
         {
             try
@@ -51,7 +51,7 @@ namespace CodilityTest
                 current = current.Next;
             }
         }
-        public  void CountLinkedList()
+        public void CountLinkedList()
         {
             int a = 0;
             Node current = head;
@@ -90,7 +90,7 @@ namespace CodilityTest
                         current = current.Next;
                     }
                 }
-               
+
             }
             catch (Exception ex)
             {
@@ -149,7 +149,7 @@ namespace CodilityTest
                             {
                                 current.Next = null;
                                 break;
-                                
+
                             }
                             current.Next = current.Next.Next;
                             current.Next.Next.Prev = current.Next;
@@ -158,8 +158,8 @@ namespace CodilityTest
                         current = current.Next;
                     }
                 }
-               
-               
+
+
             }
             catch (Exception ex)
             {
@@ -177,7 +177,7 @@ namespace CodilityTest
         {
             try
             {
-              TreeNode TempData = new TreeNode();
+                TreeNode TempData = new TreeNode();
                 TreeNode Current;
                 TreeNode Parent;
                 TempData.Data = data;
@@ -198,7 +198,7 @@ namespace CodilityTest
                         {
                             Current = Current.LeftChild;
                             //Insert to the left
-                            if (Current ==  null)
+                            if (Current == null)
                             {
                                 Parent.LeftChild = TempData;
                                 break;
@@ -223,7 +223,7 @@ namespace CodilityTest
             {
                 string error = ex.Message;
             }
-      
+
         }
         public bool SearchTree(int data)
         {
@@ -248,17 +248,17 @@ namespace CodilityTest
                         if (Current != null)
                         {
                             if (data > Current.Data)
-                        {
-                            Current = Current.RightChild;
-                        }
-                   
+                            {
+                                Current = Current.RightChild;
+                            }
+
                             if (data == Current.Data)
                             {
                                 return true;
 
                             }
                         }
-                        
+
                     }
                 }
             }
@@ -309,7 +309,7 @@ namespace CodilityTest
                     PostOrderTransversal(Current.LeftChild);
                     PostOrderTransversal(Current.RightChild);
                     Console.WriteLine(Current.Data);
-                    
+
                 }
             }
             catch (Exception ex)
@@ -321,11 +321,11 @@ namespace CodilityTest
         {
             InOrderTransversal(root);
         }
-      public class GraphNode
+        public class GraphNode
         {
             public int index;
             public string data;
-           
+
         }
         /// <summary>
         /// 3 attributes
@@ -340,12 +340,12 @@ namespace CodilityTest
         public void Graph(int V)
         {
             vertices = new List<GraphNode>();
-          CreateGraph(V);
+            CreateGraph(V);
         }
         private void CreateGraph(int SizeOfGraph)
         {
             //get the graph size first
-            graphSize = SizeOfGraph +1;//non-zero arrays, add 1
+            graphSize = SizeOfGraph + 1;//non-zero arrays, add 1
             adjMatrix = new int[graphSize, graphSize];
             //ASSUME ALL DATA HAS BEEN READ FROM A TEXT FILE & ADJACENCY MATRIX HAS BEEN INITIALIZED
         }
@@ -392,19 +392,19 @@ namespace CodilityTest
             Console.WriteLine("Number of nodes: {0}\n", graphSize - 1);
             foreach (GraphNode n in vertices)
             {
-                 Console.Write(n.data);
-             }
+                Console.Write(n.data);
+            }
             Console.WriteLine();//newline for the graph display
             for (int i = 1; i < graphSize; i++)
             {
 
             }
-                Console.WriteLine("Read the graph from left to right");
-        Console.WriteLine("Example: Node A has an edge to Node C with distance: {0}",
-            length(1,3));
-  
+            Console.WriteLine("Read the graph from left to right");
+            Console.WriteLine("Example: Node A has an edge to Node C with distance: {0}",
+                length(1, 3));
+
         }
     }
-   
-    
+
+
 }
